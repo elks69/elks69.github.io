@@ -61,25 +61,28 @@
 							</table>
 							</section>
 						</article>
+					<hr/>
 					<br/>
-					<hr>
 					<form class="" action="index.html" method="post" id="comment">
-						<legend>Оставить комментарий</legend>
-						<p>Имя Фамилия:<input type="text" name="lastname" value="" placeholder="Имя Фамилия"></p>
-						<p>Почта:<input type="email" name="email" value="" placeholder="Email"></p>
+						<label for="name">Имя Фамилия: <input type="text" name="lastname" value="" placeholder="Имя Фамилия" id="name"></label><br>
+						<br>
+						<label for="email">Почта: <input type="email" name="email" value="" placeholder="Email" id="email"></label>
+						<br>
+						<br>
 						<details open="open">
 							<summary>Дополнительная информация</summary>
 								<fieldset>
-									<p><input type="radio" name="votesex" value=male"">Мужской <input type="radio" name="votesex" value="famale">Женский</p>
+									<legend>Пол</legend>
+									<label for="male"><input type="radio" name="votesex" value="male" id="male">Мужской <label for="female"><input type="radio" name="votesex" value="famale" id="female">Женский</p></label>
 								</fieldset>
 						</details>
-						<p> <input type="checkbox" name="vote" value="">Буду рекомендовать фильм</p>
+						<br>
+						<label for="vote"><input type="checkbox" name="vote" value="">Буду рекомендовать фильм</p></label>
 						<p>Комментарий: <br/>
 							<textarea style="width: 663px; height: 143px;" name="commentarea" rows="8" cols="80" placeholder="Сообщение.." form="comment"></textarea>
 						</p>
 						<button type="submit" name="button">Добавить комментарий</button>
 					</form>
-
 					<br/>
 				</main>
 					<footer>
