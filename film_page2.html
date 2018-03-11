@@ -10,6 +10,7 @@
 					<h1>Кино.бай</h1>
 					<nav>
 						<ul role="menubar" style="list-style-type:none">
+							<li><a href="index.html">На главную</a></li>
 							<li><a href="#">Афиша</a></li>
 							<li><a href="#">Фильмы</a></li>
 							<li><a href="#">Рейтинги</a></li>
@@ -23,6 +24,12 @@
 						бедствием нынешнего — ненужные деньги.<br>
 						<cite>Рене Клер</cite>
 					</blockquote>
+					<form class="" action="index.html" method="post">
+						<p>
+							<input type="search" name="search" id="mySearch" placeholder="Поиск на сайте">
+							<button type="submit" name="button">Искать</button>
+						</p>
+					</form>
 					<hr/>
 				</header>
 				<main>
@@ -51,6 +58,24 @@
 						</table>
 							</section>
 						</article>
+						<br/>
+						<hr>
+						<form class="" action="index.html" method="post" id="comment">
+							<legend>Оставить комментарий</legend>
+							<p>Имя Фамилия:<input type="text" name="lastname" value="" placeholder="Имя"></p>
+							<p>Почта:<input type="email" name="email" value="" placeholder="Email"></p>
+							<details open="open">
+								<summary>Дополнительная информация</summary>
+									<fieldset>
+										<p><input type="radio" name="votesex" value=male"">Мужской <input type="radio" name="votesex" value="famale">Женский</p>
+									</fieldset>
+							</details>
+							<p> <input type="checkbox" name="vote" value="">Буду рекомендовать фильм</p>
+							<p>Комментарий: <br/>
+								<textarea style="width: 663px; height: 143px;" name="commentarea" rows="8" cols="80" placeholder="Сообщение.." form="comment"></textarea>
+							</p>
+							<button type="submit" name="button">Добавить комментарий</button>
+						</form>
 					<br/>
 				</main>
 					<footer>
