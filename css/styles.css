@@ -1,6 +1,4 @@
 @font-face { font-family: 'Tahoma-Bold';  src: local('Tahoma-Bold'), url('https://nomail.com.ua/files/woff/269a3173c2531cfc6b376971a672dac3.woff') format('woff'); }
-
-
 body {
   font-family: 'Tahoma',sans-serif;
   font-size: 13px;
@@ -30,7 +28,6 @@ input, button  {
 input {
   width: 100px;
 }
-
 
 .h1 {
   font-size: 2em;
