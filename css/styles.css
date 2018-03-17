@@ -1,62 +1,53 @@
 @font-face { font-family: 'Tahoma-Bold';  src: local('Tahoma-Bold'), url('https://nomail.com.ua/files/woff/269a3173c2531cfc6b376971a672dac3.woff') format('woff'); }
 body {
-  font-family: 'Tahoma',sans-serif;
-  font-size: 13px;
-
+  font: .8em Tahoma, verdana, arial normal;
   color: #333;
 }
 
-a:hover {
-    color: #f60;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-}
-
-.navbutton {
+a {
   text-decoration: none;
+  color: inherit;
 }
-
-input, button  {
-    border: 1px solid #a7a7a7;
-  	background: #fff;
-  	border-radius: 3px;
-    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
-    color: #8e8e8e;
-    font-size: 1em;
-}
-input {
-  width: 100px;
-}
-
-.h1 {
-  font-size: 2em;
+a:hover, mark, h1 {
   color: #f60;
-  text-shadow: 3px 4px 0px #4a4a4a;
-  font-weight: bold;
-
 }
+
 h1 {
   font-size: 1.3em;
-  font-weight: 500;
-}
-h1 a {
-  color: #f60;
-  text-decoration: none;
-}
-
-mark {
-  color: #f60;
-}
-
-.asideh1 {
-  color: #f60;
-}
-
-figcaption {
-  font-size: 0.9em;
+  font-weight: normal;
 }
 
 img {
-  width: 20%;
+  height: 25em;
+}
+
+figcaption {
+  font-size: .9em;
+}
+
+.header-container h1 > a {
+  text-shadow: .1em .1em #4a4a4a;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.search-container input {
+  font-size: 1em;
+}
+
+.search-container buttom {
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.search-container .fas {
+  color: #8e8e8e;
+}
+
+.menubar-container {
+  list-style-type: none;
+}
+
+.content section h1 {
+  color: inherit;
 }
