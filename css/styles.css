@@ -1,9 +1,12 @@
-@font-face { font-family: 'Tahoma-Bold';  src: local('Tahoma-Bold'), url('https://nomail.com.ua/files/woff/269a3173c2531cfc6b376971a672dac3.woff') format('woff'); }
+
 body {
   font: .8em Tahoma, verdana, arial normal;
   color: #333;
+  background: #D6D6D6 url('img/back.jpg') 100% 0  no-repeat;
 }
-
+* {
+    line-height: 1.5;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -14,21 +17,40 @@ a:hover, mark, h1 {
 
 h1 {
   font-size: 1.3em;
-  font-weight: normal;
+  font-weight: 700;
+  color: #FF6600;
 }
 
 img {
   height: 25em;
 }
 
+figure {
+  margin: 0;
+}
+
 figcaption {
   font-size: .9em;
+}
+blockquote {
+  margin: 10px;
+  padding: 5px 10px 10px 0;
+}
+footer {
+
 }
 
 .header-container h1 > a {
   text-shadow: .1em .1em #4a4a4a;
   font-size: 2em;
   font-weight: bold;
+  color: #fff;
+}
+.header-container {
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+background-color: #565656;
+padding:5px 0 4px 20px;
 }
 
 .search-container input {
@@ -44,10 +66,55 @@ figcaption {
   color: #8e8e8e;
 }
 
-.menubar-container {
+.menubar-container ul {
   list-style-type: none;
+  padding-left: 1.4em;
+}
+.menubar-container {
+  background-color: #525252;
+  border-top: .1em solid #646464;
+  color: #fff;
+  padding-bottom: 1px;
 }
 
-.content section h1 {
-  color: inherit;
+.center_column {
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+  min-width: 550px;
+}
+
+.search-result-message {
+  background-color: #fff;
+  border-bottom: .1em solid #BABABA;
+  padding: 4px 0px 13px 15px;
+  margin-top: 10px;
+  box-shadow: 0 0 1em #BABABA;
+}
+.search-result-message p > strong {
+  color: #FF6600;
+}
+article > header {
+  background: linear-gradient(to top, #DFDFDF, #F6F6F6);
+  border-left: .3em solid  #FF6600;
+  padding: 2px 0 4px 20px;
+  margin-top: 5px;
+}
+
+.content {
+  background: #fff;
+  box-shadow: 0 0 1em #BABABA;
+}
+
+.movie-description {
+  padding: 15px 15px 0px 15px;
+}
+
+.footer-container {
+  background-color: #525252;
+  border-top: .1em solid #646464;
+  color: #fff;
+  padding: 10px 0 10px 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
