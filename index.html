@@ -13,17 +13,17 @@
 					<div class="header-container">
 						<h1 class=><a name="top">Кино.бай</a></h1>
 						<div class="search-container">
-							<form class="" action="index.html" method="post">
+							<form class="" role="search" action="index.html" method="post">
 								<p>
 									<input class="search" type="search" name="search" id="mySearch" placeholder="Поиск..">
-									<button class="search" type="submit" name="button"><span class="fas fa-search"></span></button>
+									<button class="search" type="submit" aria-label="Искать" name="button"><span class="fas fa-search"></span></button>
 								</p>
 							</form>
 						</div>
 					</div>
 
 					<nav class="menubar-container">
-						<ul role="menubar" class="menubar">
+						<ul role="menubar" class="menubar" aria-orientation="horizontal">
 							<li><a role="menuitem" href="#">Афиша</a></li>
 							<li><a role="menuitem" href="#">Фильмы</a></li>
 							<li><a role="menuitem" href="#">Рейтинги</a></li>
@@ -38,7 +38,7 @@
             <p>Результаты поиска по запросу: <strong><mark>Властелин колец</mark></strong></p>
 					</div>
 						<article>
-							<hr> <!-- Я этот hr убрал и пробовал стилизовать в css, сейчас только понял и увидел то что это обычный hr :DD-->
+							<hr>
 							<header>
 								<h1><a href="film_page1.html"><mark>Властелин колец</mark>: Возвращение Короля</a></h1>
 							</header>
@@ -50,7 +50,7 @@
 									</map>
 									<figcaption>Обложка фильма</figcaption>
 								</figure>
-							<div class="">
+							<div class="about_film">
 								<section>
 									<h1>Описание</h1>
 									<p>
@@ -62,20 +62,22 @@
 									<p>Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл</p>
 								</section>
 							</div>
+							</div>
 							<footer>
 								<p><strong>Год</strong>:<time datetime="2003-10-21">2003</time>, <strong>Оценка IMDb</strong>:8.90 <small>(1 349 172)</small>, <strong>Бюджет</strong>: $94 000 000, <strong>Страна</strong>: США</p>
 							</footer>
-						</div>
+
 					</article>
 						<article>
-							<header>
-								<h1><a href="film_page2.html"><mark>Властелин колец</mark>: Две крепости</a></h1>
-							</header>
-							<div class="movie-description">
+						<header>
+							<h1><a href="film_page2.html"><mark>Властелин колец</mark>: Две крепости</a></h1>
+						</header>
+						<div class="movie-description">
 							<figure>
 									<img src="https://pp.userapi.com/c841637/v841637153/742d3/VWNIwRAPn1E.jpg" alt="Изображение постера фильма Властелин колец Две крепости ">
 								<figcaption>Обложка фильма</figcaption>
 							</figure>
+							<div class="about_film">
 							<section>
 							<h1>Описание</h1>
 							<p>
@@ -83,16 +85,17 @@
 								Фродо и Сэм вынуждены доверить свои жизни Голлуму,
 								который взялся провести их к вратам Мордора. Громадная Армия Сарумана приближается: члены братства и их союзники готовы принять бой.
 							</p>
-							</section>
-							<section>
-								<h1>Актеры</h1>
-								<p>Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд</p>
-							</section>
+						  	</section>
+									<section>
+										<h1>Актеры</h1>
+										<p>Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд</p>
+									</section>
+								</div>
+						</div>
 							<footer>
 								<p><strong>Год:</strong><time datetime="2003-12-23">2002 <strong>Оценка IMDb</strong>: 8.70 <small>(1 221 214)</small>, <strong>Бюджет</strong>: $9 400 0000, <strong>Страна</strong>: США</p>
 							</footer>
-					</div>
-					</article>
+						</article>
 							<article>
 								<header>
 									<h1><a href="film_page3.html"><mark>Властелин колец</mark>: Братство кольца</a></h1>
@@ -101,7 +104,9 @@
 									<figure>
 											<img src="https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg" alt="Изображение постера фильма Властелин колец Братство кольца">
 											<figcaption>Обложка фильма</figcaption>
-									</figure><section>
+									</figure>
+								<div class="about_film">
+									<section>
 											<h1>Описание</h1>
 											<p>
 												Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
@@ -111,18 +116,18 @@
 											<h1>Актеры</h1>
 											<p>Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн</p>
 										</section>
+									</div>
+								</div>
 										<footer>
 											<p><strong>Год</strong>:<time datetime="2003-12-23">2001</time>, <strong>Оценка IMDb</strong>: 8.80 <small>(1 389 831)</small>, <strong>Бюджет</strong>: $93 000 000, <strong>Страна</strong>: США</p>
 									</footer>
-								</div>
-						</article>
+								</article>
 			</main>
 				<aside class="right-colum">
 					<article>
 						<header>
 							<h1>Скоро на сайте</h1>
 						</header>
-						<div class="movie-description">
 						<section>
 								<h1>Черная пантера</h1>
 									<p>
@@ -164,6 +169,5 @@
 						</div>
 				</footer>
 			</div>
-		</div>
 	</body>
 </html>
