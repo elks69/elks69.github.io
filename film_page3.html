@@ -2,90 +2,99 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'/>
 		<title>Кино.бай</title>
 	</head>
-		<body>
-				<header>
-					<strong id="top">Внимание!</strong> Этот сайт не использует технологии <abbr title="от англ. Cascading Style Sheets — каскадные таблицы стилей">CSS</abbr> и JavaScript, он создан при помощи <abbr title="от англ. HyperText Markup Language — «язык гипертекстовой разметки»">HTML</abbr>
-					<h1>Кино.бай</h1>
-					<nav>
-						<ul role="menubar" style="list-style-type:none">
-							<li><a href="index.html">На главную</a></li>
-							<li><a href="#">Афиша</a></li>
-							<li><a href="#">Фильмы</a></li>
-							<li><a href="#">Рейтинги</a></li>
-							<li><a href="#">Журналы</a></li>
-							<li><a href="#">Оскар 2018</a></li>
-						</ul>
-					</nav>
-					<p>Кино на любой вкус</p>
-					<blockquote>
-						Бедствие немого кино были ненужные надписи,<br>
-						бедствием нынешнего — ненужные деньги.<br>
-						<cite>Рене Клер</cite>
-					</blockquote>
-					<form class="" action="index.html" method="post">
-						<p>
-							<input type="search" name="search" id="mySearch" placeholder="Поиск на сайте">
-							<button type="submit" name="button">Искать</button>
-						</p>
-					</form>
-					<hr/>
-				</header>
-				<main>
-					<br/>
-						<article>
-							<h1><mark>Властелин колец</mark>: Братство кольца</h1>
+	<body>
+		<div class="center_column">
+			<header>
+				<div class="header-container">
+					<h1 class=><a name="top" href="index.html">Кино.бай</a></h1>
+					<div class="search-container">
+						<form class="" role="search" action="index.html" method="post">
+								<input class="search" type="search" name="search" id="mySearch" placeholder="Поиск..">
+								<button class="search" type="submit" aria-label="Искать" name="button"><span class="fas fa-search"></span></button>
+						</form>
+					</div>
+				</div>
+
+				<nav class="menubar-container">
+					<ul role="menubar" class="menubar" aria-orientation="horizontal">
+						<li><a role="menuitem"  href="#">Афиша</a></li>
+						<li><a role="menuitem"  href="#">Фильмы</a></li>
+						<li><a role="menuitem"  href="#">Рейтинги</a></li>
+						<li><a role="menuitem"  href="#">Журналы</a></li>
+						<li><a role="menuitem"  href="#">Оскар 2018</a></li>
+					</ul>
+				</nav>
+
+			</header>
+
+		<div class="content">
+			<main>
+				<article>
+						<header>
+							<h1><a href="film_page1.html"><mark>Властелин колец</mark>: Братство кольца</a></h1>
+						</header>
+						<div class="movie-description">
 							<figure>
-									<img src="https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg" alt="Изображение постера фильма Властелин колец Братство кольца">
+								<img class="poster"src="https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg" alt="Изображение постера фильма Властелин колец Две крепости">
 								<figcaption>Обложка фильма</figcaption>
 							</figure>
+						<div class="about_film">
 							<section>
-							<h1>Описание</h1>
-							<p>
-								Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
-							</p>
-							<h1>Актеры</h1>
-							<p>Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн</p>
-
-							<h1>Трейлер фильма</h1>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/4BE5u9itrsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-							<br>
-							<br>
-						<table border="1">
-							<caption>Информация</caption>
-							<tr><th>Год</th><th>Оценка IMDb</th><th>Бюджет</th><th>Страна</th></tr>
-							<tr><td>2001</td><td>8.80<small>(1 389 831)</small></td><td>$93 000 000</td><td>США</td></tr>
-						</table>
+								<h1>Описание</h1>
+								<p>
+									Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
+								</p>
 							</section>
-						</article>
-						<hr/>
-						<br/>
-						<form class="" action="index.html" method="post" id="comment">
-							<label for="name">Имя Фамилия: <input type="text" name="lastname" value="" placeholder="Имя Фамилия" id="name"></label><br>
-							<br>
-							<label for="email">Почта: <input type="email" name="email" value="" placeholder="Email" id="email"></label>
-							<br>
-							<br>
-							<details open="open">
-								<summary>Дополнительная информация</summary>
-									<fieldset>
-										<legend>Пол</legend>
-										<label for="male"><input type="radio" name="votesex" value="male" id="male">Мужской <label for="female"><input type="radio" name="votesex" value="famale" id="female">Женский</p></label>
-									</fieldset>
-							</details>
-							<br>
-							<label for="vote"><input type="checkbox" name="vote" value="">Буду рекомендовать фильм</p></label>
-							<p>Комментарий: <br/>
-								<textarea style="width: 663px; height: 143px;" name="commentarea" rows="8" cols="80" placeholder="Сообщение.." form="comment"></textarea>
-							</p>
-							<button type="submit" name="button">Добавить комментарий</button>
-						</form>
-						<br/>
+							<section>
+								<h1>Актеры</h1>
+								<p>Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн</p>
+							</section>
+						</div>
+					</div>
+							<section class="trailer">
+								<h1>Трейлер фильма</h1>
+								<iframe width="" height="" src="https://www.youtube.com/embed/4BE5u9itrsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</section>
+								<table>
+									<tr><th>Год</th><th>Оценка <span class="tooltip" data-tooltip="Internet Movie Database">IMDb</span></th><th>Бюджет</th><th>Страна</th></tr>
+									<tr><td>2001</td><td>8.80<small>(1 389 831)</small></td><td>	$93 000 000</td><td>США</td></tr>
+								</table>
+
+					</article>
+					<section class="comments">
+						<form>
+								<div>
+									<label class="required" for="username">Имя</label>
+									<input id="username" name="username" type="text" required />
+								</div>
+								<div>
+									<label class="required" for="email">Почта</label>
+									<input id="email" name="email" type="email" required />
+								</div>
+								<div>
+									<div>
+										<label class="required" for="comment">Комментарий</label>
+										<textarea id="comment" name="comment" required></textarea>
+									</div>
+									<button type="submit">Добавить комментарий</button>
+								</div>
+							</form>
+					</section>
+
 				</main>
-					<footer>
-						<a href="#">Наверх страницы</a> <a href="index.html">На главную</a><address><p>За какой-либо информацией обращайтесь по адресу <b><a href="mailto:john.smit@gmail.com" style="text-decoration:none; color:black">john.smit@gmail.com</a></b></address></p>
-						<small>©<time datetime="2018">2018</time>, Кино.бай</small>
-					</footer>
-		</body>
+			</div>
+
+			<footer>
+				<div class="footer-container">
+					<a href="#top">Наверх<span></span></a><address><p>За какой-либо информацией обращайтесь по адресу <b><a href="mailto:john.smit@gmail.com">john.smit@gmail.com</a></b></address></p>
+					<small>©<time datetime="2018">2018</time>, Кино.бай</small>
+				</div>
+			</footer>
+	</div>
+</body>
 </html>

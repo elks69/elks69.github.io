@@ -2,92 +2,106 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'/>
 		<title>Кино.бай</title>
 	</head>
-		<body>
-				<header>
-					<strong id="top">Внимание!</strong> Этот сайт не использует технологии <abbr title="от англ. Cascading Style Sheets — каскадные таблицы стилей">CSS</abbr> и JavaScript, он создан при помощи <abbr title="от англ. HyperText Markup Language — «язык гипертекстовой разметки»">HTML</abbr>
-					<h1>Кино.бай</h1>
-					<nav>
-						<ul role="menubar" style="list-style-type:none">
-							<li><a href="index.html">На главную</a></li>
-							<li><a href="#">Афиша</a></li>
-							<li><a href="#">Фильмы</a></li>
-							<li><a href="#">Рейтинги</a></li>
-							<li><a href="#">Журналы</a></li>
-							<li><a href="#">Оскар 2018</a></li>
-						</ul>
-					</nav>
-					<p>Кино на любой вкус</p>
-					<blockquote>
-						Бедствие немого кино были ненужные надписи,<br>
-						бедствием нынешнего — ненужные деньги.<br>
-						<cite>Рене Клер</cite>
-					</blockquote>
-					<form class="" action="index.html" method="post">
-						<p>
-							<input type="search" name="search" id="mySearch" placeholder="Поиск на сайте">
-							<button type="submit" name="button">Искать</button>
-						</p>
-					</form>
-				</header>
-				<main>
-						<article>
-							<h1><mark>Властелин колец</mark>: Возвращение Короля</h1>
+	<body>
+		<div class="center_column">
+			<header>
+				<div class="header-container">
+					<h1 class=><a name="top">Кино.бай</a></h1>
+					<div class="search-container">
+						<form class="" role="search" action="index.html" method="post">
+								<input class="search" type="search" name="search" id="mySearch" placeholder="Поиск..">
+								<button class="search" type="submit" aria-label="Искать" name="button"><span class="fas fa-search"></span></button>
+						</form>
+					</div>
+				</div>
+
+				<nav class="menubar-container">
+					<ul role="menubar" class="menubar" aria-orientation="horizontal">
+						<li><a role="menuitem"  href="#">Афиша</a></li>
+						<li><a role="menuitem"  href="#">Фильмы</a></li>
+						<li><a role="menuitem"  href="#">Рейтинги</a></li>
+						<li><a role="menuitem"  href="#">Журналы</a></li>
+						<li><a role="menuitem"  href="#">Оскар 2018</a></li>
+					</ul>
+				</nav>
+
+			</header>
+
+		<div class="content">
+			<main>
+				<article>
+						<header>
+							<h1><a href="film_page1.html"><mark>Властелин колец</mark>: Возвращение Короля</a></h1>
+						</header>
+						<div class="movie-description">
 							<figure>
-								<img src="https://pp.userapi.com/c841637/v841637153/742c5/qFaHQ7455RU.jpg" usemap="#aragorn" alt="Изображение постера фильма Властелин колец Две крепости">
+								<img class="poster"src="https://pp.userapi.com/c841637/v841637153/742c5/qFaHQ7455RU.jpg" usemap="#aragorn" alt="Изображение постера фильма Властелин колец Две крепости">
 								<map name="aragorn">
-    							<area target="_blank" alt="Арагорн" href="https://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%B0%D0%B3%D0%BE%D1%80%D0%BD" coords="135,97,103,112,85,139,81,167,83,195,91,220,104,235,107,252,100,271,97,292,99,314,105,334,131,350,156,341,185,341,191,318,211,296,234,291,250,297,263,312,267,274,270,239,257,187,234,179,213,193,201,168,195,133,187,114,176,106,156,99" shape="poly">
+									<area target="_blank" alt="Арагорн" href="https://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%B0%D0%B3%D0%BE%D1%80%D0%BD"coords="60,51,50,65,43,73,40,81,37,89,37,96,38,105,41,112,42,120,45,125,47,135,48,141,43,146,40,151,42,157,45,163,47,169,46,175,44,182,46,190,45,197,43,203,39,209,42,217,45,223,47,230,51,236,63,241,72,245,86,245,95,245,107,242,117,239,122,235,123,224,127,216,133,211,141,207,154,203,161,206,170,210,177,208,179,200,180,187,185,177,185,166,181,154,177,138,175,126,169,116,155,105,127,85,125,69,120,59,111,53,97,47,80,45" shape="poly">
 								</map>
 								<figcaption>Обложка фильма</figcaption>
 							</figure>
+						<div class="about_film">
 							<section>
-							<h1>Описание</h1>
-							<p>
-								Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья. Повелитель сил Тьмы Саурон направляет свои бесчисленные рати под стены Минас-Тирита, крепости Последней Надежды.
-							</p>
-							<h1>Актеры</h1>
-							<p>Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл</p>
-								<h1>Трейлер фильма</h1>
-								<video width="420" height="315" controls >
-									<source src="https://ia800209.us.archive.org/21/items/TheLordOfTheRingsTrilogyTrailer/TheLordOfTheRingsTrilogyTrailer.mp4" type="video/mp4">
-										Тег video не поддерживается вашим браузером.
-   								<a href="https://ia800209.us.archive.org/21/items/TheLordOfTheRingsTrilogyTrailer/TheLordOfTheRingsTrilogyTrailer.mp4">Скачайте видео</a>.
-								</video>
-							<table border="1">
-								<caption>Информация</caption>
-								<tr><th>Год</th><th>Оценка IMDb</th><th>Бюджет</th><th>Страна</th></tr>
-								<tr><td>2003</td><td>8.90<small>(1 349 172)</small></td><td>$94 000 000</td><td>США</td></tr>
-							</table>
+								<h1>Описание</h1>
+								<p>
+									Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья. Повелитель сил Тьмы Саурон направляет свои бесчисленные рати под стены Минас-Тирита, крепости Последней Надежды.
+								</p>
 							</section>
-						</article>
-					<hr/>
-					<br/>
-					<form class="" action="index.html" method="post" id="comment">
-						<label for="name">Имя Фамилия: <input type="text" name="lastname" value="" placeholder="Имя Фамилия" id="name"></label><br>
-						<br>
-						<label for="email">Почта: <input type="email" name="email" value="" placeholder="Email" id="email"></label>
-						<br>
-						<br>
-						<details open="open">
-							<summary>Дополнительная информация</summary>
-								<fieldset>
-									<legend>Пол</legend>
-									<label for="male"><input type="radio" name="votesex" value="male" id="male">Мужской <label for="female"><input type="radio" name="votesex" value="famale" id="female">Женский</p></label>
-								</fieldset>
-						</details>
-						<br>
-						<label for="vote"><input type="checkbox" name="vote" value="">Буду рекомендовать фильм</p></label>
-						<p>Комментарий: <br/>
-							<textarea style="width: 663px; height: 143px;" name="commentarea" rows="8" cols="80" placeholder="Сообщение.." form="comment"></textarea>
-						</p>
-						<button type="submit" name="button">Добавить комментарий</button>
-					</form>
-					<br/>
+							<section>
+								<h1>Актеры</h1>
+								<p>Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл</p>
+							</section>
+						</div>
+					</div>
+							<section class="trailer">
+								<h1>Трейлер фильма</h1>
+								<video controls>
+										<source src="https://ia800209.us.archive.org/21/items/TheLordOfTheRingsTrilogyTrailer/TheLordOfTheRingsTrilogyTrailer.mp4" type="video/mp4">
+											Тег video не поддерживается вашим браузером.
+   									<a href="https://ia800209.us.archive.org/21/items/TheLordOfTheRingsTrilogyTrailer/TheLordOfTheRingsTrilogyTrailer.mp4">Скачайте видео</a>.
+								</video>
+							</section>
+								<table>
+									<tr><th>Год</th><th>Оценка <span class="tooltip" data-tooltip="Internet Movie Database">IMDb</span></th><th>Бюджет</th><th>Страна</th></tr>
+									<tr><td>2003</td><td>8.90<small>(1 349 172)</small></td><td>$94 000 000</td><td>США</td></tr>
+								</table>
+
+					</article>
+								<section class="comments">
+									<form>
+											<div>
+												<label class="required" for="username">Имя</label>
+												<input id="username" name="username" type="text" required />
+											</div>
+											<div>
+												<label class="required" for="email">Почта</label>
+												<input id="email" name="email" type="email" required />
+											</div>
+											<div>
+												<div>
+													<label class="required" for="comment">Комментарий</label>
+													<textarea id="comment" name="comment" required></textarea>
+												</div>
+												<button type="submit">Добавить комментарий</button>
+											</div>
+										</form>
+								</section>
+
 				</main>
-					<footer>
-						<a href="#">Наверх страницы</a> <a href="index.html">На главную</a><address><p>За какой-либо информацией обращайтесь по адресу <b><a href="mailto:john.smit@gmail.com" style="text-decoration:none; color:black">john.smit@gmail.com</a></b></address></p>
-						<small>©<time datetime="2018">2018</time>, Кино.бай</small>
-					</footer>
-		</body>
+			</div>
+
+			<footer>
+				<div class="footer-container">
+					<a href="#top">Наверх<span></span></a><address><p>За какой-либо информацией обращайтесь по адресу <b><a href="mailto:john.smit@gmail.com">john.smit@gmail.com</a></b></address></p>
+					<small>©<time datetime="2018">2018</time>, Кино.бай</small>
+				</div>
+			</footer>
+	</div>
+</body>
 </html>
