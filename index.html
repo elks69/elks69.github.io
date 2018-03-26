@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" media="screen, handheld"  href="css/media.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'/>
 		<title>Кино.бай</title>
@@ -22,7 +24,9 @@
 						</div>
 					</div>
 
-					<nav class="menubar-container">
+					<input type="checkbox" id="menu-checkbox" />
+					<nav role="navigation" class="menubar-container">
+						<label for="menu-checkbox" class="toggle-button" data-open="Меню" data-close="Закрыть" onclick></label>
 						<ul role="menubar" class="menubar" aria-orientation="horizontal">
 							<li><a role="menuitem" href="#">Афиша</a></li>
 							<li><a role="menuitem" href="#">Фильмы</a></li>
@@ -169,7 +173,6 @@
 						</div>
 				</footer>
 			</div>
+			<svg height="0" width="0"><filter id="blur">	<feGaussianBlur stdDeviation="1"/></filter></svg>
 	</body>
 </html>
-<!--Не знал куда вынести SVG что бы он не влиял на разметку. Перед выполнением лекцию не смотрел (пока что)-->
-<svg><filter id="blur">	<feGaussianBlur stdDeviation="2" /></filter></svg>
