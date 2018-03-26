@@ -113,7 +113,7 @@ li > a::after {
   width: 100%;
   transform: scaleX(0);
   height: .1em;
-  bottom: 0;
+  bottom: 0.3em;
   left: 0;
   background-color: var(--orangeColor);
   transform-origin: bottom right;
@@ -161,6 +161,7 @@ li > a::after {
 .movie-description {
   --areaBackground: white;
    display: flex;
+   align-items: flex-start;
   }
 
  .content > main,
@@ -214,18 +215,17 @@ li > a::after {
 }
 
 .right-colum {
-  display: block;
-  flex-direction: column;
-  align-items: flex-end;
+  /* justify-content: space-around; */
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+  flex: 1;
   flex-grow: 1
 }
 
 main {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   flex-grow: 4;
-  flex-shrink: 1;
   flex-basis: 10em;
 }
 
@@ -233,9 +233,10 @@ main {
   flex-basis: 10em;
 }
 
-/* HomeWork#10*/
 .content {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 table, iframe, video {
@@ -372,15 +373,48 @@ h1 > a:hover {
   opacity: 1;
 }
 
+#menu-checkbox {
+  /* чекбокс скрыт */
+  display: none;
+}
+.menubar {
+  /* пункты меню скрыты */
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+.menubar li {
+  /* пункты меню расположены вертикально */
+  /* каждый имеет ширину 100% */
+  text-align: center;
+  font-size: 1.5em;
+  display: block;
+  width: 100%;
+}
+.menubar a {
 
+  display: block;
+  padding: .5em;
+  text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
---
+.toggle-button {
+  text-align: center;
+  font-size: 1.5em;
+  display: block;
+  cursor: pointer;
+  background-color: #525252;
+  color: #fff;
+}
+.toggle-button:after {
+  content: attr(data-open);
+  display: block;
+  margin: 0.62em 0;
+  padding: 0.62em 1.8em;
+}
+#menu-checkbox:checked + nav[role="navigation"] .menubar {
+  display: block;
+}
+#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+  content: attr(data-close);
+}
