@@ -38,11 +38,12 @@ main {flex-basis:  34em;}
   display: none;
   background-color:#b5500d;
   }
+  
 .menubar {
   display: block;
   margin: 0 auto;
-  height: 30px;
   }
+
 .menubar li {
   width: calc(100% / 5);
   text-align: center;
@@ -68,7 +69,7 @@ main {flex-basis: 40em;}
 .center_column > header, .content,.content > .right-colum, .center_column > footer, content  {margin: 0; border-radius: 0;}
 p, blockquote {font-size: 1.5em;}
 .about_film > p { float: left;}
-figure > img {height: 58em;}
+figure > img {height: auto;  width: 100%;}
 .footer-container > a {
   font-size: 1.5em;
   text-align: center;
@@ -80,6 +81,9 @@ figure > img {height: 58em;}
 
 /* iPhone Retina */
 @media only screen and (max-width : 320px) {
+  body {
+    background: #D6D6D6;
+    font-size: : 1em }
 p {font-size: 1.5em;}
 .footer-container > a {
   font-size: 1.5em;
