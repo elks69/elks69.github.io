@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Java Script Lessons</title>
+</head>
+<body>
+	<button type="button" name="button" id="btn" style=" width:90px; height: 35px; margin: 40px;" >Клик!</button>
+  <script>
+      var button = window.document.getElementById('btn');
+      button.onclick = function () {
+      var a = window.prompt('Число а:', 0);
+      var b = window.prompt('Число b:', 0);
+      var c = window.parseInt(a) + window.window.parseInt(b);
+      window.alert('Результат:' + c);
+    }
+  </script>
+</body>
+</html>
