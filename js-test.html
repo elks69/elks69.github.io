@@ -13,10 +13,7 @@
         var a = window.prompt('1 + 1 = ?');
 
 		ShowWin();
-
-
-
-        function ShowWin() {
+				function ShowWin() {
             if (a === '2') {
 
                 var ready = window.confirm('You are right. Next question?');
@@ -31,11 +28,11 @@
                         var result = fact(rand);
 
                         if (b == result) {
-                            window.alert('111');
+                            window.alert('Верный результат');
                         }
 
                         else {
-                            window.alert('fuck');
+                            window.alert('Неверный результат');
                         }
                  //       i++;
                  //   }
@@ -67,15 +64,15 @@
             return (n != 1) ? n * fact(n - 1) : 1;
         };
 
-      // "use strict";
-      //  var button = window.document.getElementById('btn');
-			//
-      //  button.onclick = function () {
-      //  var a = window.prompt('Число а:', 0);
-      //  var b = window.prompt('Число b:', 0);
-      //  var c = window.parseInt(a) + window.parseInt(b);
-      // window.alert('Результат:' + c);
-    // }
+    /*   "use strict";
+       var button = window.document.getElementById('btn');
+
+       button.onclick = function () {
+       var a = window.prompt('Число а:', 0);
+       var b = window.prompt('Число b:', 0);
+       var c = window.parseInt(a) + window.parseInt(b);
+      window.alert('Результат:' + c);
+    }*/
   </script>
 </body>
 </html>
