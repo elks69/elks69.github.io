@@ -39,26 +39,23 @@
 
                 }
 
-
                 else {
                     window.close();
                 }
-            }
+          }
 		}
 
 
-		 if (a !== '2') {
-			var cont = window.confirm('Wrong answer. Try again?');
-			if (cont === true)
-			{
-                ShowWin();
-			}
-			else {
-			    window.close();
-			}
-
-         }
-
+		 						if (a !== '2') {
+									var cont = window.confirm('Wrong answer. Try again?');
+									if (cont === true)
+									{
+                	ShowWin();
+								}
+								else {
+			    		window.close();
+						}
+   		}
 
         function fact(n) {
             return (n != 1) ? n * fact(n - 1) : 1;
