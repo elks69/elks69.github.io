@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Java Script Lessons</title>
+</head>
+<body>
+
+  <script>
+	'use strict';
+
+	function fact(x){
+		if(x === 0 || x === 1){
+			return 1;
+		}
+
+		for(var i = x - 1; i >= 1; i--){
+			x = x * i;
+		}
+		return x;
+	}
+
+var repeat = true, answer = null, rand = 0;
+
+	while(repeat) {
+		answer = prompt('1 + 1 = ?');
+		if (2 === parseInt(answer)) {
+			repeat = confirm('You are right. Next question?');
+			if (repeat) {
+				rand = Math.floor(Math.random() * (4 - 1)) + 1;
+				answer = prompt('f(' + rand  + ') = ?');
+				if (fact(rand === parseInt(answer))) {
+					repeat = confirm('You are right. Try again?');
+				} else {
+					repeat = confirm('Wrong answer. Try again?');
+				}
+			}
+		} else {
+			repeat = confirm('Wrong answer. Try again?');
+		}
+	}
+  </script>
+</body>
+</html>
