@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script Lessons</title>
+</head>
+
+<body>
+
+	<script>
+		'use strict';
+
+		function Animal() {
+			var food = null,
+				name = null;
+		};
+
+		Animal.prototype.eat = function(name, food) {
+			console.log(name + ' eats ' + food);
+		};
+
+
+		function Rabbit() {
+		};
+
+
+		Rabbit.prototype = Object.create(Animal.prototype);
+
+
+		Rabbit.prototype.jump = function() {
+			console.log('Rabbit jumps');
+		};
+
+		function Lion() {
+		};
+
+		Lion.prototype = Object.create(Animal.prototype);
+
+		Lion.prototype.run = function() {
+			console.log('Lion runs');
+		};
+
+		var animal = new Animal();
+		var rabbit = new Rabbit();
+		var lion = new Lion();
+
+
+		animal.eat('Animal', 'grass');
+		animal.jump;
+		animal.run;
+
+
+		rabbit.eat('Rabbit', 'carrot');
+		rabbit.jump();
+		rabbit.run;
+
+
+		lion.eat('Lion', 'meat');
+		lion.run();
+	</script>
+</body>
+
+</html>
