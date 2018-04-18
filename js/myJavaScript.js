@@ -54,7 +54,7 @@
      }
   ];
 
-  var main = document.createElement('main');
+  var main = document.querySelector('main');
 
   for (var i = 0; i < searchResults.length; i++) {
       main.appendChild(createArticle(searchResults[i]));
@@ -63,9 +63,9 @@
   function createArticle(film) {
     var article = document.createElement('article');
 
-    article.appendChild(createHeader(film.header[i]));
-    article.appendChild(createDetails(film.details[i]));
-    article.appendChild(createFooter(film.footer[i]));
+    article.appendChild(createHeader(film.header));
+    article.appendChild(createDetails(film.details));
+    article.appendChild(createFooter(film.footer));
 
     return article;
 
@@ -74,8 +74,8 @@
   function createHeader(film) {
       var header = document.createElement('header');
 
-      header.appendChild(createTitle(film.header[i].title));
-      header.appendChild(createUrl(film.header[i].url));
+      header.appendChild(createTitle(film.header.title));
+      header.appendChild(createUrl(film.header.url));
 
       return header;
   }
@@ -83,9 +83,9 @@
   function createDetails(film) {
       var details = document.createElement('section');
 
-      details.appendChild(createPoster(film.details[i].poster));
-      details.appendChild(createActors(film.details[i].actors));
-      details.appendChild(createDescription(film.details[i].description));
+      details.appendChild(createPoster(film.details.poster));
+      details.appendChild(createActors(film.details.actors));
+      details.appendChild(createDescription(film.details.description));
 
       return details;
   }
@@ -93,10 +93,10 @@
   function createFooter(film) {
       var footer = document.createElement('footer');
 
-      footer.appendChild(createYear(film.footer[i].year));
-      footer.appendChild(createImdb(film.footer[i].imdb));
-      footer.appendChild(createBudget(film.footer[i].budget));
-      footer.appendChild(createCountry(film.footer[i].country));
+      footer.appendChild(createYear(film.footer.year));
+      footer.appendChild(createImdb(film.footer.imdb));
+      footer.appendChild(createBudget(film.footer.budget));
+      footer.appendChild(createCountry(film.footer.country));
 
       return footer;
   }
