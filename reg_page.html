@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+
+
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" media="screen, handheld"  href="css/media.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'/>
+		<title>Кино.бай</title>
+	</head>
+	<body>
+		<div class="center_column">
+			<header>
+				<div class="header-container">
+					<h1><a name="top" href="index.html">Кино.бай</a></h1>
+					<div class="search-container">
+						<form class="" role="search" action="index.html" method="post">
+								<input class="search" type="search" name="search" id="mySearch" placeholder="Поиск..">
+								<button class="search" type="submit" aria-label="Искать" name="button"><span class="fas fa-search"></span></button>
+						</form>
+					</div>
+				</div>
+
+				<input type="checkbox" id="menu-checkbox" />
+				<nav role="navigation" class="menubar-container">
+					<label for="menu-checkbox" class="toggle-button" data-open="Меню" data-close="Закрыть" onclick></label>
+					<ul role="menubar" class="menubar" aria-orientation="horizontal">
+						<li><a role="menuitem" href="#">Афиша</a></li>
+						<li><a role="menuitem" href="#">Фильмы</a></li>
+						<li><a role="menuitem" href="#">Рейтинги</a></li>
+						<li><a role="menuitem" href="#">Журналы</a></li>
+						<li><a role="menuitem" href="#">Оскар 2018</a></li>
+					</ul>
+				</nav>
+
+			</header>
+
+		<div class="content">
+			<main>
+
+				<div class="login">
+  				<div class="login-triangle"></div>
+						<h2 class="login-header">Регистрация</h2>
+
+  					<form class="login-container" id="form">
+    					<p><input type="name" placeholder="Имя" required></p>
+    					<p><input type="password" placeholder="Пароль" required></p>
+    					<p><input type="email" placeholder="Email" required></p>
+    					<p><button type="submit" value="Готово">Готово</button></p>
+  				</form>
+				</div>
+				</div>
+			</main>
+			<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+			<script src="js/common.js"></script>
+</body>
+</html>
