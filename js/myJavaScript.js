@@ -1,55 +1,62 @@
+window.onload = function() {
+
+  'use strict';
+
   var searchResults = [
       {
           header: {
-              title: "Властелин колец: Возвращение Короля",
-              url: "film_page1.html"
+              title: 'Властелин колец: Возвращение Короля',
+              url: 'film_page1.html'
           },
           details: {
-              poster: "https://pp.userapi.com/c841637/v841637153/742c5/qFaHQ7455RU.jpg",
-              actors: "Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл",
-              description: "Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья..."
+              pic: 'https://pp.userapi.com/c841637/v841637153/742c5/qFaHQ7455RU.jpg',
+              actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл',
+              description: 'Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья...'
           },
           footer: {
-              year: "Год: 2003",
-              imdb: "8.90 (1 349 172)",
-              budget: "$94 000 000",
-              country: "США"
+              time: '2003',
+              imdb: '8.90 (1 349 172)',
+                add: 'dsaas',
+              budget: '$94 000 000',
+              country: 'США'
           }
       },
 
       {
           header: {
-              title: "Властелин колец: Две крепости",
-              url: "film_page2.html"
+              title: 'Властелин колец: Две крепости',
+              url: 'film_page2.html'
           },
           details: {
-              poster: "https://pp.userapi.com/c841637/v841637153/742d3/VWNIwRAPn1E.jpg",
-              actors: "Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд",
-              description: "Братство распалось, но Кольцо Всевластья должно быть уничтожено..."
+              pic: 'https://pp.userapi.com/c841637/v841637153/742d3/VWNIwRAPn1E.jpg',
+              actors: 'Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд',
+              description: 'Братство распалось, но Кольцо Всевластья должно быть уничтожено...'
           },
           footer: {
-              year: "Год: 2002",
-              imdb: "8.70 (1 221 214)",
-              budget: "$94 000 0000",
-              country: "США"
+              time: '2002',
+                add: 'dsaas',
+              imdb: '8.70 (1 221 214)',
+              budget: '$94 000 0000',
+              country: 'США'
           }
       },
 
       {
           header: {
-              title: "Властелин колец: Братство кольца",
-              url: "film_page3.html"
+              title: 'Властелин колец: Братство кольца',
+              url: 'film_page3.html'
           },
           details: {
-              poster: "https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg",
-              actors: "Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл",
-              description: "Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу."
+              pic: 'https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg',
+              actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл',
+              description: 'Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.'
           },
           footer: {
-              year: "Год: 2001",
-              imdb: "8.80 (1 389 831)",
-              budget: "$93 000 000",
-              country: "США"
+              time: '2001',
+                add: 'dsaas',
+              imdb: '8.80 (1 389 831)',
+              budget: '$93 000 000',
+              country: 'США'
           }
      }
   ];
@@ -60,6 +67,7 @@
       main.appendChild(createArticle(searchResults[i]));
   }
 
+
   function createArticle(film) {
     var article = document.createElement('article');
 
@@ -68,91 +76,100 @@
     article.appendChild(createFooter(film.footer));
 
     return article;
-
-  }
-
-  function createHeader(film) {
-      var header = document.createElement('header');
-
-      header.appendChild(createTitle(film.header.title));
-      header.appendChild(createUrl(film.header.url));
-
-      return header;
-  }
-
-  function createDetails(film) {
-      var details = document.createElement('section');
-
-      details.appendChild(createPoster(film.details.poster));
-      details.appendChild(createActors(film.details.actors));
-      details.appendChild(createDescription(film.details.description));
-
-      return details;
-  }
-
-  function createFooter(film) {
-      var footer = document.createElement('footer');
-
-      footer.appendChild(createYear(film.footer.year));
-      footer.appendChild(createImdb(film.footer.imdb));
-      footer.appendChild(createBudget(film.footer.budget));
-      footer.appendChild(createCountry(film.footer.country));
-
-      return footer;
   }
 
 
-  function createTitle(str) {
-      var title = document.createElement('h1');
-      title.textContent = str;
+  function createHeader(header) {
+      var head = document.createElement('header'); //Создаем <header>
 
-      return title;
+      var link = document.createElement('a'); //Создаем <a>
+      link.setAttribute('href', header.url); //Присваиваем <a> дочерний элемент в виде атрибута "href". И обращаемся к Header > url
+
+      var titleDivide = header.title.split(':'); // Методом split делим строку на масивы из двух частей ([0] и [1]).
+      var mark = document.createElement('mark'); //Создаем <mark>
+
+      mark.appendChild(document.createTextNode(titleDivide[0])); // Добавляем текст (в первую часть масива [0]) в <mark>
+      link.appendChild(mark); // Делаем <mark> дочерним к ссылке <a>
+      link.appendChild(document.createTextNode(':' + titleDivide[1])); // Добавляем текст (во вторую часть масива [1])
+
+      head.appendChild(document.createElement('h1')).appendChild(link); // В <header> создаем дочерний элемент <h1> в котором ещё один дочерний <a>
+
+      return head;
+
   }
 
-  function createUrl(str) {
-      var url = document.createElement('a');
-      url.textContent = str;
-      return url;
-  }
+  function createDetails(details) {
 
-  function createPoster(str) {
-      var poster = document.createElement('img');
-      poster.textContent = str;
-      return poster;
-  }
+      var section = document.createElement('div'); // Создаем <div>
+      section.setAttribute('class', 'movie-description'); // Сетаем atr. element.setAttribute(имя атрибута, значение атрибута);
 
-  function createActors(str) {
-      var actors = document.createElement('p');
-      actors.textContent = str;
-      return actors;
-  }
+      var pic = document.createElement('figure'); // Создаем <figure>
+      pic.innerHTML =  //Вызываю встроеный метод для переменной pic.
+        '<img src="' +  // Куски разметки которую вставляем черещ метод innerHTML
+        details.pic + // Обращаемся к родительскому det = <div> что бы обратиться к pic = <figure>.
+        '" />' +
+        '<figcaption>Обложка фильма</figcaption>';
 
-  function createDescription(str) {
-      var descr = document.createElement('div');
-      descr.textContent = str;
-      return descr;
-  }
+        var actors = document.createElement('section');
+        actors.innerHTML = '<h1>Актеры</h1><p>' + details.actors + '</p>';
 
-  function createYear(str) {
-      var year = document.createElement('time');
-      year.textContent = str;
-      return year;
-  }
+      var paragraph = document.createElement('div');
+      var description = document.createElement('section');
+      description.innerHTML = '<h1>Описание</h1><p>' + details.description + '<p>';
 
-  function createImdb(str) {
-      var imdb = document.createElement('p');
-      imdb.textContent = str;
-      return imdb;
-  }
+      paragraph.appendChild(description);
+      paragraph.appendChild(actors);
 
-  function createBudget(str) {
-      var budg = document.createElement('p');
-      budg.textContent = str;
-      return budg;
-  }
+      section.appendChild(pic);
+      section.appendChild(paragraph);
 
-  function createCountry(str) {
-      var country = document.createElement('p');
-      country.textContent = str;
-      return country;
-  }
+      return section;
+    }
+
+    function createFooter(footer) {
+      var section = document.createElement('footer');
+
+      var paragraph = document.createElement('p');
+
+      var year = document.createElement('strong');
+      year.textContent = 'Год:';
+
+      var time = document.createElement('time');
+      time.appendChild(document.createElement('strong'));
+
+      time.setAttribute('datetime', footer.time);
+      time.textContent = 'Год:' + footer.time.split('-')[0];
+
+      var estimate = document.createElement('strong');
+      estimate.textContent = ' Оценка ';
+
+      var abbr = document.createElement('span');
+      var tooltip = document.createElement('span');
+      tooltip.setAttribute('data-tooltip', 'Internet Movie Database');
+      tooltip.setAttribute('class', 'tooltip');
+      tooltip.textContent = "IMDb";
+      abbr.appendChild(tooltip);
+      estimate.appendChild(abbr);
+      estimate.appendChild(document.createTextNode(':'));
+
+      var additional = document.createElement('span');
+      additional.textContent = ' (' + footer.imdb + ') ';
+
+      var budget = document.createElement('strong');
+      budget.textContent = ' Бюджет:';
+
+      var country = document.createElement('strong');
+      country.textContent = ' Страна:';
+
+      section.appendChild(time);
+      section.appendChild(document.createTextNode(','));
+      section.appendChild(estimate);
+      section.appendChild(document.createTextNode(' ' + footer.imdb));
+      section.appendChild(additional);
+      section.appendChild(document.createTextNode(','));
+      section.appendChild(budget);
+      section.appendChild(document.createTextNode(' ' + footer.budget + ','));
+      section.appendChild(country);
+      section.appendChild(document.createTextNode(' ' + footer.country));
+      return section;
+    } };
