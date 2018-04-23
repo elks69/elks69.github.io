@@ -2,61 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Java Script Lessons</title>
+	<title>Ajax lessons</title>
 </head>
 
 <body>
-
+	<button id='ajax'>Получить данные</button>
 	<script>
 		'use strict';
+		var btn = document.querySelector('#ajax'); // Присваиваю значение переменной кнопке с id #ajax
+		btn.onclick = function () {
+ 		var req = new XMLHttpRequest();  //Создаем переменную для HTTP запроса
+ 		req.open('GET', '/database.json', true);  // Создаем запрос через req.open указываем мето и имя файла в скобках. Третье значение "true" - асинхронный метод
+ 		req.onreadystatechange = function (Evt) { // Когда вернулся код состояния 4 выводить текст из консоли, если в диапозоне 200 отображать
+	 		if (req.readyState == 4) {
+		 		if(req.status == 200) {
+			 		console.log(req.responseText);
+		 	} else {
+			  console.log(req.status, 'Ошибка загрузки');
+		 }
+	 }
+ };
+ 	req.send(null);
+}
 
-		function Animal() {
-			var food = null,
-				name = null;
-		};
-
-		Animal.prototype.eat = function(name, food) {
-			console.log(name + ' eats ' + food);
-		};
-
-
-		function Rabbit() {
-		};
-
-
-		Rabbit.prototype = Object.create(Animal.prototype);
-
-
-		Rabbit.prototype.jump = function() {
-			console.log('Rabbit jumps');
-		};
-
-		function Lion() {
-		};
-
-		Lion.prototype = Object.create(Animal.prototype);
-
-		Lion.prototype.run = function() {
-			console.log('Lion runs');
-		};
-
-		var animal = new Animal();
-		var rabbit = new Rabbit();
-		var lion = new Lion();
-
-
-		animal.eat('Animal', 'grass');
-		animal.jump;
-		animal.run;
-
-
-		rabbit.eat('Rabbit', 'carrot');
-		rabbit.jump();
-		rabbit.run;
-
-
-		lion.eat('Lion', 'meat');
-		lion.run();
 	</script>
 </body>
 
