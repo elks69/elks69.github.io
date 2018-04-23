@@ -39,12 +39,12 @@ img {
   transition: all 1s ease-in-out;
 }
 
-map > area,figure > img:hover {
+/* map > area,figure > img:hover {
   cursor: zoom-in;
   animation: filter .4s ease;
   animation-fill-mode: forwards;
   transform: scale(1.2) rotateZ(20deg);
-}
+} */
 
 @keyframes filter {
   0% {box-shadow: 0 0 0 0  rgba(0,0,0,0.5);

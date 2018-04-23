@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<script type="text/javascript" src="js/comments.js"></script>
 		<link rel="stylesheet" media="screen, handheld"  href="css/media.css" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -76,8 +77,13 @@
 								</table>
 
 					</article>
-								<section class="comments">
-									<form>
+
+
+							<section class="comments">
+								<div id="Allcomments">
+								</div>
+
+									<form id="addComment">
 											<div>
 												<label class="required" for="username">Имя<span class="fas fa-asterisk"></span></label>
 												<input id="username" name="username" type="text" required />
@@ -91,11 +97,12 @@
 													<label class="required" for="comment">Комментарий<span class="fas fa-asterisk"></span></label>
 													<textarea id="comment" name="comment" required></textarea>
 												</div>
-												<button type="submit">Добавить комментарий</button>
+												<button type="submit" id="add_Comments" onsubmit="return false">Добавить комментарий</button>
 											</div>
 										</form>
-								</section>
 
+								</div>
+							</section>
 				</main>
 			</div>
 
