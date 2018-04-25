@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Ajax lessons</title>
-</head>
-
-<body>
-	<button id='ajax'>Получить данные</button>
-	<script>
-		'use strict';
+'use strict';
 		var btn = document.querySelector('#ajax'); // Присваиваю значение переменной кнопке с id #ajax
 		btn.onclick = function () {
  		var req = new XMLHttpRequest();  //Создаем переменную для HTTP запроса
@@ -24,8 +14,3 @@
  };
  	req.send(null);
 }
-
-	</script>
-</body>
-
-</html>
