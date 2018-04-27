@@ -1,11 +1,36 @@
-'use strict';
 
 
-  var main = document.querySelector('main');{
+  'use strict';
 
-  for (var i = 0; i < searchResults.length; i++) {
-      main.appendChild(createArticle(searchResults[i]));
-  }
+  window.onload = function () {
+    var main = document.querySelector('main');
+    // var main = document.getElementsByTagName('main')[0];
+
+    var request = new XMLHttpRequest();
+    request.open('GET', 'database.json', true);
+    request.onreadystatechange = function () {
+      if (request.readyState == 4) {
+        if(request.status == 200) {
+          var response = JSON.parse(request.responseText);
+          var searchResults = response.searchResults;
+
+          for (var i = 0; i < searchResults.length; i++) {
+            main.appendChild(createArticle(searchResults[i]));
+          }
+          // main.appendChild(createArticle(searchResults[0]));
+          // main.appendChild(createArticle(searchResults[1]));
+          // main.appendChild(createArticle(searchResults[2]));
+
+        } else {
+          console.error(request.status, 'Error loading JSON');
+        }
+      }
+    };
+    request.send(null);
+
+  // for (var i = 0; i < searchResults.length; i++) {
+  //     main.appendChild(createArticle(searchResults[i]));
+  // }
 
 
   function createArticle(film) {
@@ -115,19 +140,4 @@
       section.appendChild(country);
       section.appendChild(document.createTextNode(' ' + footer.country));
       return section;
-    }
-
-    
-      var req = new XMLHttpRequest();  //Создаем переменную для HTTP запроса
-      req.open('GET', 'js/database.json', true);  // Создаем запрос через req.open указываем мето и имя файла в скобках. Третье значение "true" - асинхронный метод
-      req.onreadystatechange = function () { // Когда вернулся код состояния 4 выводить текст из консоли, если в диапозоне 200 отображать
-        if (req.readyState == 4) {
-          if(req.status == 200) {
-            console.log(req.responseText);
-        } else {
-          console.log(req.status, 'Ошибка загрузки');
-       }
-     }
-    };
-    req.send(null);
-    };
+    } };

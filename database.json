@@ -1,4 +1,6 @@
-"searchResults": [{
+{
+"searchResults": [
+  {
         "header": {
             "title": "Властелин колец: Возвращение Короля",
             "url": "film_page1.htm"
@@ -53,4 +55,4 @@
             "budget": "$93 000 000",
             "country": "США"
         }
-   }];
+   }]};
