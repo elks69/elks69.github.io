@@ -1,67 +1,7 @@
-window.onload = function() {
+'use strict';
 
-  'use strict';
 
-  var searchResults = [
-      {
-          header: {
-              title: 'Властелин колец: Возвращение Короля',
-              url: 'film_page1.html'
-          },
-          details: {
-              pic: 'https://pp.userapi.com/c841637/v841637153/742c5/qFaHQ7455RU.jpg',
-              actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл',
-              description: 'Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья...'
-          },
-          footer: {
-              time: '2003',
-              imdb: '8.90 (1 349 172)',
-                add: 'dsaas',
-              budget: '$94 000 000',
-              country: 'США'
-          }
-      },
-
-      {
-          header: {
-              title: 'Властелин колец: Две крепости',
-              url: 'film_page2.html'
-          },
-          details: {
-              pic: 'https://pp.userapi.com/c841637/v841637153/742d3/VWNIwRAPn1E.jpg',
-              actors: 'Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд',
-              description: 'Братство распалось, но Кольцо Всевластья должно быть уничтожено...'
-          },
-          footer: {
-              time: '2002',
-                add: 'dsaas',
-              imdb: '8.70 (1 221 214)',
-              budget: '$94 000 0000',
-              country: 'США'
-          }
-      },
-
-      {
-          header: {
-              title: 'Властелин колец: Братство кольца',
-              url: 'film_page3.html'
-          },
-          details: {
-              pic: 'https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg',
-              actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл',
-              description: 'Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.'
-          },
-          footer: {
-              time: '2001',
-                add: 'dsaas',
-              imdb: '8.80 (1 389 831)',
-              budget: '$93 000 000',
-              country: 'США'
-          }
-     }
-  ];
-
-  var main = document.querySelector('main');
+  var main = document.querySelector('main');{
 
   for (var i = 0; i < searchResults.length; i++) {
       main.appendChild(createArticle(searchResults[i]));
@@ -138,7 +78,7 @@ window.onload = function() {
       time.appendChild(document.createElement('strong'));
 
       time.setAttribute('datetime', footer.time);
-      time.textContent = 'Год:' + footer.time.split('-')[0];
+      time.innerHTML = '<strong>Год:</strong>' + footer.time.split('-')[0];
 
       var estimate = document.createElement('strong');
       estimate.textContent = ' Оценка ';
@@ -151,6 +91,9 @@ window.onload = function() {
       abbr.appendChild(tooltip);
       estimate.appendChild(abbr);
       estimate.appendChild(document.createTextNode(':'));
+
+      var additional = document.createElement('small');
+      additional.textContent = ' (' + footer.imdb.add + ') ';
 
       var additional = document.createElement('span');
       additional.textContent = ' (' + footer.imdb + ') ';
@@ -172,4 +115,19 @@ window.onload = function() {
       section.appendChild(country);
       section.appendChild(document.createTextNode(' ' + footer.country));
       return section;
-    } };
+    }
+
+    
+      var req = new XMLHttpRequest();  //Создаем переменную для HTTP запроса
+      req.open('GET', 'js/database.json', true);  // Создаем запрос через req.open указываем мето и имя файла в скобках. Третье значение "true" - асинхронный метод
+      req.onreadystatechange = function () { // Когда вернулся код состояния 4 выводить текст из консоли, если в диапозоне 200 отображать
+        if (req.readyState == 4) {
+          if(req.status == 200) {
+            console.log(req.responseText);
+        } else {
+          console.log(req.status, 'Ошибка загрузки');
+       }
+     }
+    };
+    req.send(null);
+    };

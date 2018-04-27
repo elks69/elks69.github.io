@@ -491,7 +491,7 @@ label > span .fas, .fa-asterisk {
   font-size: 0.95em;
 }
 
-p > button {
+button[value="Готово"] {
   box-sizing: border-box;
   display: block;
   width: 100%;
