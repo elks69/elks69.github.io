@@ -1,36 +1,71 @@
-
+window.onload = function() {
 
   'use strict';
 
-  window.onload = function () {
-    var main = document.querySelector('main');
-    // var main = document.getElementsByTagName('main')[0];
-
-    var request = new XMLHttpRequest();
-    request.open('GET', 'database.json', true);
-    request.onreadystatechange = function () {
-      if (request.readyState == 4) {
-        if(request.status == 200) {
-          var response = JSON.parse(request.responseText);
-          var searchResults = response.searchResults;
-
-          for (var i = 0; i < searchResults.length; i++) {
-            main.appendChild(createArticle(searchResults[i]));
+  var searchResults = [
+      {
+          header: {
+              title: 'Властелин колец: Возвращение Короля',
+              url: 'film_page1.html'
+          },
+          details: {
+              pic: 'https://pp.userapi.com/c841637/v841637153/742c5/qFaHQ7455RU.jpg',
+              actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл',
+              description: 'Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья...'
+          },
+          footer: {
+              time: '2003',
+              imdb: '8.90',
+                add: '(1 349 172)',
+              budget: '$94 000 000',
+              country: 'США'
           }
-          // main.appendChild(createArticle(searchResults[0]));
-          // main.appendChild(createArticle(searchResults[1]));
-          // main.appendChild(createArticle(searchResults[2]));
+      },
 
-        } else {
-          console.error(request.status, 'Error loading JSON');
-        }
-      }
-    };
-    request.send(null);
+      {
+          header: {
+              title: 'Властелин колец: Две крепости',
+              url: 'film_page2.html'
+          },
+          details: {
+              pic: 'https://pp.userapi.com/c841637/v841637153/742d3/VWNIwRAPn1E.jpg',
+              actors: 'Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд',
+              description: 'Братство распалось, но Кольцо Всевластья должно быть уничтожено...'
+          },
+          footer: {
+              time: '2002',
+              imdb: '8.70',
+                add: '(1 221 214)',
+              budget: '$94 000 0000',
+              country: 'США'
+          }
+      },
 
-  // for (var i = 0; i < searchResults.length; i++) {
-  //     main.appendChild(createArticle(searchResults[i]));
-  // }
+      {
+          header: {
+              title: 'Властелин колец: Братство кольца',
+              url: 'film_page3.html'
+          },
+          details: {
+              pic: 'https://pp.userapi.com/c841637/v841637153/742cc/QFsmuXwie1Y.jpg',
+              actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл',
+              description: 'Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.'
+          },
+          footer: {
+              time: '2001',
+              imdb: '8.80',
+                add: '(1 389 831)',
+              budget: '$93 000 000',
+              country: 'США'
+          }
+     }
+  ];
+
+  var main = document.querySelector('main');
+
+  for (var i = 0; i < searchResults.length; i++) {
+      main.appendChild(createArticle(searchResults[i]));
+  }
 
 
   function createArticle(film) {
